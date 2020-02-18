@@ -1,0 +1,55 @@
+service: himaspocapp
+app: my-express-serverless-application-app
+org: himasmitab
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 128
+  timeout: 30
+
+functions:
+  # hello:
+  #   handler: handler.hello
+  getEmployee:
+    handler: handler.getEmployee
+    events:
+      - http:
+        path: employee/{empid}
+        method: get
+        cors: true
+
+  getAllEmployees:
+    handler: handler.getAllEmployees
+    events:
+      - http:
+        path: employee
+        method: get
+        cors: true
+
+  createEmployee:
+    handler: handler.createEmployee
+    events:
+      - http:
+        path: employee
+        method: post
+        cors: true
+
+  updateEmployee:
+    handler: handler.updateEmployee
+    events:
+      - http:
+        path: employee/{empid}
+        method: put
+        cors: true
+
+  deleteEmployee:
+    handler: handler.deleteEmployee
+    events:
+      - http:
+        path: employee/{empid}
+        method: delete
+        cors: true
+
+plugins:
+  - serverless-offline

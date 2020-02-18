@@ -1,0 +1,21 @@
+{
+  "name": "himaspocapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "postgresql-easy": "^1.2.5",
+    "serverless-http": "^2.3.1",
+    "serverless-offline": "^5.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Himasmita Barman",
+  "license": "ISC"
+}
